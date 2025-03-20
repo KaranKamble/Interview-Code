@@ -43,32 +43,31 @@ public class Program {
 
 	}
 
-	public static void main3(String[] args) {
+	public static void main(String[] args) {
 		// print last non-repeated character from given String
-		// Wrong code
+		
 
-		String str = "Software Services";
-
-		int start = str.length() - 1;
-		// int end = str.length() - 1;
-
-		for (int i = start; i >= 0; i--) {
-
+		String string = "Software Services";
+		String str = string.toLowerCase();
+		
+		for( int i = str.length()-1; i >= 0; i-- ) {
 			char ch = str.charAt(i);
 			boolean flag = false;
-
-			for (int j = i - 1; j >= 0; j--) {
-				if (ch == str.charAt(j)) {
+			
+			for( int j = 0; j < str.length(); j++ ) {
+				
+				if( i != j && ch == str.charAt(j)) {
 					flag = true;
 					break;
 				}
 			}
-
-			if (!flag) {
-				System.out.println("Last Non repeated char " + ch);
+			
+			if( !flag ) {
+				System.out.println("last non-repeated character is : "+ch);
 				return;
 			}
 		}
+		
 
 	}
 
@@ -163,7 +162,7 @@ public class Program {
 	}
 	
 	
-	public static void main(String[] args) {
+	public static void main8(String[] args) {
 		// program to print Highest occurred character from given String
 		//	Output: a
 		
