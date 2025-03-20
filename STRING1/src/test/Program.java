@@ -1,8 +1,38 @@
 package test;
 
 public class Program {
-
+	
 	public static void main(String[] args) {
+		
+		String string = "Ssttrriinngg";
+		String str = string.toLowerCase();
+		
+		for( int i = 0; i < str.length(); i++ ) {
+			char ch = str.charAt(i);
+			boolean flag = false;
+			
+			for( int j = 0; j < str.length(); j++ ) {
+				
+				if( i != j && ch == str.charAt(j)) {
+					flag = true;
+					break;
+				}
+			}
+			
+			if( !flag ) {
+				System.out.println("First non-repeated character is "+ch);
+				return;
+			}
+			else {
+				System.out.println("All the characters are repeated characters");
+				return;
+			}
+		}
+		
+		
+	}
+
+	public static void main3(String[] args) {
 		String string = "Software Services";
 		String str = string.toLowerCase();
 		for( int i = str.length()-1; i >= 0; i-- ) {
